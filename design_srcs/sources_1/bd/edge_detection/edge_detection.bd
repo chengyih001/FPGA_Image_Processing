@@ -1,0 +1,51 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6E17ED7CBEF19A50",
+      "device": "xc7z020clg400-1",
+      "name": "edge_detection",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1.1"
+    },
+    "design_tree": {
+      "edge_detection_sobel_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000"
+          }
+        }
+      }
+    },
+    "components": {
+      "edge_detection_sobel_0": {
+        "vlnv": "xilinx.com:module_ref:edge_detection_sobel:1.0",
+        "xci_name": "edge_detection_edge_detection_sobel_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "edge_detection_sobel",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_1": {
+        "ports": [
+          "clk",
+          "edge_detection_sobel_0/clk"
+        ]
+      }
+    }
+  }
+}
