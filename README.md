@@ -29,15 +29,16 @@ For median filter, convolution is still performed over the whole image, but inst
 
 ## Implementation
  
-### Python:   `image_edge_detection.ipynb,   image_denoising.ipynb,   image_denoising_color.ipynb`
+Python:   `image_edge_detection.ipynb,   image_denoising.ipynb,   image_denoising_color.ipynb`
 
     The python files are for visualizing the output pixel arrays.
 
-### Verilog: `edge_detection_sobel.v, denoising_median_filter.v, denoising_median_color.v`
+Verilog: `edge_detection_sobel.v, denoising_median_filter.v, denoising_median_color.v`
 
     These three files implements the full algorithms in order to achieve the goal of image pre-processing.
 
-### Verilog: `testbench_edge_detection.v,  testbench_denoising.v,  testbench_denoising_color.v`
+Verilog: `testbench_edge_detection.v,  testbench_denoising.v,  testbench_denoising_color.v`
+
     The testbenches take respective inputs into the models and save the results in the file specified.
 
 In addition, one thing worth noting is that the image size will shrink by two pixels after applying the filters since no padding or striding is introduced. For example, an input image with 512x512 will shrink to 510x510 after applying the filter. This is due to the convolutional manner implemented, and can be solved through padding and striding during pre-implementation of the modules if needed.
